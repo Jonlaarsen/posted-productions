@@ -53,7 +53,7 @@ export default function Page() {
       />
       <img
         src="/c-lights-Photoroom.png"
-        className="absolute top-30 md:-top-20 left-1/2 -translate-x-1/2 h-50 md:h-100  w-auto z-49"
+        className="absolute top-15 md:-top-20 left-1/2 -translate-x-1/2 h-50 md:h-100  w-auto z-49"
         alt=""
       />
       <img

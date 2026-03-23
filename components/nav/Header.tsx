@@ -39,11 +39,11 @@ const Header = () => {
         />
       </Link>
       <div className="absolute top-8 right-20 flex items-center justify-center gap-4 z-55 ">
-        <Link href="/">
+        <Link href="https://www.linkedin.com/in/posted-productions-00488833b/">
           {" "}
           <LinkedinIcon className="h-8 w-8 text-white hover:posted-text ease-in-out duration-300" />
         </Link>
-        <Link href="/">
+        <Link href="https://www.instagram.com/_postedproductions/">
           <InstagramIcon className="h-8 w-8 text-white hover:posted-text ease-in-out duration-300" />
         </Link>
       </div>

@@ -3,6 +3,7 @@ import { Fira_Sans, Fugaz_One, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/nav/Header";
 import { OrganizationJsonLd } from "@/components/JsonLd";
+import Script from "next/script";
 
 const geistSans = Fira_Sans({
   variable: "--font-geist-sans",
@@ -77,6 +78,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          id="google-tag-manager"
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-RJMZTVWS9B"
+        ></Script>
+        <Script
+          id="google-analytics"
+          dangerouslySetInnerHTML={{
+            __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RJMZTVWS9B');
+    `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
