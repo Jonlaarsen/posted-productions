@@ -1,5 +1,5 @@
 import { query } from '../../lib/db';
-import { triggerVercelDeploy } from '../lib/vercelDeploy';
+import { triggerVercelDeploy } from '../../lib/vercelDeploy';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
