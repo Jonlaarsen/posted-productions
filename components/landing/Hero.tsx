@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="h-screen min-h-screen relative overflow-hidden">
       {/* Loading overlay */}
       {!ready && (
-        <div className="absolute inset-0 z-10 flex justify-center items-center bg-black text-9xl font-mono uppercase font-black">
+        <div className="absolute inset-0 z-10 flex justify-center items-center bg-black text-6xl md:text-9xl font-mono uppercase font-black">
           <div className="relative">
             {/* Gray base text */}
             <span className="text-gray-400">Loading...</span>

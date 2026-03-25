@@ -33,7 +33,7 @@ const Page = () => {
   const isSection3InView = useInView(section3Ref, { once: true, amount: 0.2 });
 
   return (
-    <div className="min-h-screen overflow-hidden size-full py-20 flex flex-col items-center justify-center bg-black">
+    <div className="min-h-screen overflow-hidden size-full  py-20 flex flex-col items-center justify-center bg-black">
       <motion.div
         className="relative z-10 flex flex-col items-center text-center"
         variants={container}
@@ -52,11 +52,11 @@ const Page = () => {
         </motion.h1>
         <motion.h2
           variants={item}
-          className="text-2xl max-w-6xl text-center pb-10 pt-5 text-white/90"
+          className="text-2xl px-2 max-w-6xl text-center pb-10 pt-5 text-white/90"
         >
           We create and refine premium content across genres - news, podcast,
-          travel, sports, music, social issues, true crime, entertainment,
-          commercials, music video, brand contents and more...
+          travel, sports, music, social issues, <br /> true crime,
+          entertainment, commercials, music video, brand contents and more...
         </motion.h2>
       </motion.div>
 
@@ -83,7 +83,7 @@ const Page = () => {
         </motion.div>
         <motion.div
           variants={item}
-          className="size-full flex flex-col items-center justify-center text-2xl font-extralight gap-5 text-white/80"
+          className="size-full flex flex-col items-center text-center justify-center text-lg md:text-2xl font-extralight gap-5 text-white/80"
         >
           <p>♦ Creative development & scripting</p>
           <p>♦ Budgeting & Scheduling</p>
@@ -102,19 +102,20 @@ const Page = () => {
       >
         <motion.div
           variants={item}
-          className="size-full order-2 md:order-1 text-center md:text-end px-10 flex flex-col items-center justify-center text-2xl font-extralight gap-5 text-white/80"
+          className="size-full order-2 md:order-1 text-center  px-10 flex flex-col items-center justify-center text-lg md:text-2xl font-extralight gap-5 text-white/80"
         >
           <p>
             {" "}
-            Full Production Crew i.e. Producer, Director, DoP, Sound, Drone, PA,
-            and more. ♦
+            ♦ Full Production Crew i.e. Producer, Director, <br /> DoP, Sound,
+            Drone, PA, and more.
           </p>
           <p>
-            Top-Tier Rentals: Cameras, lighting, gear, and vehicles tailored to
-            your project. ♦
+            ♦ Top-Tier Rentals: Cameras, lighting, gear, <br /> and vehicles
+            tailored to your project.
           </p>
           <p>
-            Expert Logistics: From setup to wrap-up, we handle every detail. ♦
+            ♦ Expert Logistics: From setup to wrap-up, <br /> we handle every
+            detail.
           </p>
         </motion.div>
         <motion.div
@@ -161,7 +162,7 @@ const Page = () => {
         </motion.div>
         <motion.div
           variants={item}
-          className="size-full flex flex-col text-center md:text-start items-center justify-center text-2xl font-extralight gap-5 text-white/80"
+          className="size-full flex flex-col px-2 text-center md:text-start items-center justify-center text-lg md:text-2xl font-extralight gap-5 text-white/80"
         >
           <p>♦ Transcoding & Editing: Precision at every frame.</p>
           <p>♦ Color Grading: Visuals that captivate.</p>

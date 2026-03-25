@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import { ArrowBigLeft, ArrowBigRightDash, ArrowLeft, X } from "lucide-react";
@@ -67,8 +67,19 @@ const Page = () => {
     (typeof teamMembers)[0] | null
   >(null);
 
+  useEffect(() => {
+    if (selectedMember) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selectedMember]);
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen size-full pt-60 pb-20 bg-black text-white">
+    <div className="flex flex-col overflow-hidden px-4 items-center justify-center min-h-screen size-full pt-60 pb-20 bg-black text-white">
       <motion.div
         className="flex flex-col items-center text-center"
         variants={container}
@@ -90,7 +101,7 @@ const Page = () => {
       </motion.div>
 
       <motion.div
-        className="max-w-7xl flex flex-wrap gap-10 py-20 items-center justify-center px-4"
+        className="max-w-7xl  flex flex-wrap gap-10 py-20 items-center justify-center "
         variants={container}
         initial="hidden"
         animate="visible"
@@ -99,7 +110,7 @@ const Page = () => {
           <motion.div
             key={index}
             variants={item}
-            className="w-96 h-128 relative z-50 bg-white/5 rounded-lg border border-white/10 overflow-hidden cursor-pointer group"
+            className="w-82 h-96 md:w-96 md:h-128 relative z-50 bg-white/5 rounded-lg border border-white/10 overflow-hidden cursor-pointer group"
             whileHover={{ scale: 1.03, y: -8 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
             onClick={() => setSelectedMember(member)}
@@ -125,7 +136,7 @@ const Page = () => {
         {selectedMember && (
           <motion.div
             key="modal"
-            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 flex flex-col md:flex-row items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -134,7 +145,7 @@ const Page = () => {
           >
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
             <motion.div
-              className="relative z-10 w-full max-w-5xl flex overflow-hidden bg-black/60 rounded-2xl border border-white/20 p-8 shadow-2xl"
+              className="relative z-10 w-full max-w-5xl flex flex-col md:flex-row overflow-x-scroll bg-black/60 rounded-2xl border border-white/20 p-8 shadow-2xl"
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 10 }}
@@ -153,16 +164,16 @@ const Page = () => {
                 alt=""
               />
               <div className="flex flex-col px-5">
-                <div className="flex items-center pt-4 justify-between">
+                <div className="flex flex-col md:flex-row items-center gap-4 pt-4 text-center">
                   <h3 className="text-3xl font-mono font-black">
                     {selectedMember.name}
                   </h3>
-                  <p className="text-blue-200/80 text-xl font-light  mt-2">
+                  <p className="text-blue-200/80 text-xl font-light  ">
                     {selectedMember.role}
                   </p>
                 </div>
 
-                <p className="size-full pb-2 text-white/80 text-xl flex items-end font-light">
+                <p className="size-full pb-2 text-white/80 text-xl flex items-end text-center md:text-start font-light">
                   {selectedMember.desc}
                 </p>
               </div>
