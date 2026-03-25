@@ -83,7 +83,7 @@ const Page = () => {
         </motion.div>
         <motion.div
           variants={item}
-          className="size-full flex flex-col items-center text-center justify-center text-lg md:text-2xl font-extralight gap-5 text-white/80"
+          className="size-full flex flex-col items-center text-center justify-center text-lg md:text-2xl font-extralight gap-5 text-white/80 pt-2"
         >
           <p>♦ Creative development & scripting</p>
           <p>♦ Budgeting & Scheduling</p>
@@ -102,7 +102,7 @@ const Page = () => {
       >
         <motion.div
           variants={item}
-          className="size-full order-2 md:order-1 text-center  px-10 flex flex-col items-center justify-center text-lg md:text-2xl font-extralight gap-5 text-white/80"
+          className="size-full order-2 md:order-1 text-center  px-10 flex flex-col items-center justify-center text-lg md:text-2xl font-extralight gap-5 text-white/80 pt-2"
         >
           <p>
             {" "}
@@ -162,7 +162,7 @@ const Page = () => {
         </motion.div>
         <motion.div
           variants={item}
-          className="size-full flex flex-col px-2 text-center md:text-start items-center justify-center text-lg md:text-2xl font-extralight gap-5 text-white/80"
+          className="size-full flex flex-col px-2 text-center md:text-start items-center justify-center text-lg md:text-2xl font-extralight gap-5 text-white/80 pt-2"
         >
           <p>♦ Transcoding & Editing: Precision at every frame.</p>
           <p>♦ Color Grading: Visuals that captivate.</p>
