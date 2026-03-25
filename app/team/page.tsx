@@ -9,21 +9,21 @@ import Vision from "@/components/landing/Vision";
 const teamMembers = [
   {
     id: 1,
-    img: "https://www.posted-productions.com/profile-pictures/KeithPP.jpeg",
+    url: "/profile-pictures/KeithPP.jpeg",
     name: "Keith Park",
     role: "Director",
     desc: "Keith Park is a seasoned multimedia producer and director with over 9 years of experience across print, radio, television news, documentary, advertisement, and corporate shoots in South Korea. His work for renowned platforms such as VICE, Netflix, Al Jazeera, CNN, PBS, BBC, Sky, CNA and ITV highlights his expertise in delivering compelling and authentic stories. Keith's dedication to storytelling earned him the prestigious 2020 Peabody Award for Global Pandemic Coverage, recognizing his outstanding production on PBS Newshour’s Global Pandemic and Making Sense: The Victims of the Covid Economy.",
   },
   {
     id: 2,
-    img: "https://www.posted-productions.com/profile-pictures/WooPP.jpeg",
+    url: "/profile-pictures/WooPP.jpeg",
     name: "Wooseok Kim",
     role: "Better than tommy",
     desc: "Wooseok Kim is a versatile fixer, and production assistant with a strong track record in documentary filmmaking. His expertise in facilitating seamless production makes him an invaluable asset to any project. His portfolio working as a fixer and logistics expert has been among big channels such as CNA, Channel Sky, ARD, VICE, VRT, BBC Radio and more.",
   },
   {
     id: 3,
-    img: "https://www.posted-productions.com/profile-pictures/TommyPP.jpeg",
+    url: "/profile-pictures/TommyPP.jpeg",
     name: "Tommy Choi",
     role: "Producer",
     desc: "Tommy Choi is a highly experienced cinematographer, editor, and director collaborating with brands such as Gentle Monster, Maison Margiela, AVE, Converse, Vans, Kasina and more. Whilst owning a strong brand marketing portfolio, Tommy is also highly experienced working as cameraman on documentaries such as ‘The Raincoat Killer’ series on Netflix and shooting music videos with the likes of artists like Kali Uchis, Travis Scott, 21 Savage. Woo Wonjae, The Black Skirts and P1Harmony",
@@ -31,14 +31,14 @@ const teamMembers = [
 
   {
     id: 5,
-    img: "https://www.posted-productions.com/profile-pictures/IkkPP.jpeg",
+    url: "/profile-pictures/IkkPP.jpeg",
     name: "Ikk Seung",
     role: "Sound Designer",
     desc: "Ikk is a skilled production manager and editor with a proven track record, having previously worked on the successful YouTube channel Meta Comedy. With expertise in managing complex projects and a keen eye for detail, Ikk brings a wealth of experience to Posted Productions, ensuring smooth operations and seamless execution across all productions. For post-production, Ikk also works as an editor, turning raw content into a polished final product.",
   },
   {
     id: 6,
-    img: "https://www.posted-productions.com/profile-pictures/IdeunPP.jpeg",
+    url: "/profile-pictures/IdeunPP.jpeg",
     name: "Ideun Jeong",
     role: "Creative Director",
     desc: "Ideun is a skilled on-set professional who focuses mainly on sound, lighting, editing and script writing. With a background in film, Ideun brings a deep understanding of production equipment, and has a sharp ear for high-quality sound design. Her technical expertise spans both the creative and operational aspects, especially for audio production, allowing her to effectively manage soundscapes. She has had previous experience as a field recorder and a mixer on projects for CNA, BBC Radio, Caper Film (Netflix movie Alienoid), and more!",
@@ -124,7 +124,7 @@ const Page = () => {
               </span>
             </div>
             <img
-              src={member.img}
+              src={member.url}
               className="inset-0 absolute size-full z-10"
               alt=""
             />
@@ -159,7 +159,7 @@ const Page = () => {
                 <X className="h-10 w-10" />
               </button>
               <img
-                src={selectedMember.img}
+                src={selectedMember.url}
                 className="h-82 rounded-tl-4xl z-50"
                 alt=""
               />
