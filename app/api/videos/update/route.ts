@@ -15,10 +15,7 @@ export async function PUT(req: Request) {
     const sql = neon(`${process.env.DATABASE_URL}`);
 
     // Check if the video exists
-    const checkVideo = await sql(
-      `SELECT * FROM uploads WHERE id = $1`,
-      [id]
-    );
+    const checkVideo = await sql`SELECT * FROM uploads WHERE id = ${id}`;
 
     if (checkVideo.length === 0) {
       return NextResponse.json({ error: 'Video not found.' }, { status: 404 });
@@ -28,20 +25,18 @@ export async function PUT(req: Request) {
     let result;
     try {
       // Try with camelCase column names first (including categories)
-      result = await sql(
-        `UPDATE uploads
-         SET title = $1, subtitle = $2, description = $3, imgURL = $4, videoURL = $5, categories = $6
-         WHERE id = $7 RETURNING *`,
-        [title, subtitle, description, imgURL, videoURL, categories, id]
-      );
+      result = await sql`
+        UPDATE uploads
+        SET title = ${title}, subtitle = ${subtitle}, description = ${description}, imgURL = ${imgURL}, videoURL = ${videoURL}, categories = ${categories}
+        WHERE id = ${id} RETURNING *
+      `;
     } catch {
       // If that fails, try with lowercase column names
-      result = await sql(
-        `UPDATE uploads
-         SET title = $1, subtitle = $2, description = $3, imgurl = $4, videourl = $5, categories = $6
-         WHERE id = $7 RETURNING *`,
-        [title, subtitle, description, imgURL, videoURL, categories, id]
-      );
+      result = await sql`
+        UPDATE uploads
+        SET title = ${title}, subtitle = ${subtitle}, description = ${description}, imgurl = ${imgURL}, videourl = ${videoURL}, categories = ${categories}
+        WHERE id = ${id} RETURNING *
+      `;
     }
 
     // Revalidate cache

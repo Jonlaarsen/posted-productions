@@ -13,20 +13,14 @@ export async function DELETE(req: Request) {
     const sql = neon(`${process.env.DATABASE_URL}`);
 
     // Check if the video exists
-    const checkVideo = await sql(
-      `SELECT * FROM uploads WHERE id = $1`,
-      [id]
-    );
+    const checkVideo = await sql`SELECT * FROM uploads WHERE id = ${id}`;
 
     if (checkVideo.length === 0) {
       return NextResponse.json({ error: 'Video not found.' }, { status: 404 });
     }
 
     // Delete the video
-    await sql(
-      `DELETE FROM uploads WHERE id = $1`,
-      [id]
-    );
+    await sql`DELETE FROM uploads WHERE id = ${id}`;
 
     // Revalidate cache
     revalidatePath('/');

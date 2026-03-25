@@ -48,18 +48,16 @@ export const create = async (formData: FormData) => {
     // Try to insert with the correct column names based on what exists in the database
     try {
       // Try with camelCase column names first
-      await sql(
-        `INSERT INTO uploads (title, subtitle, description, imgURL, videoURL, categories) 
-         VALUES ($1, $2, $3, $4, $5, $6)`,
-        [title, subtitle, description, imgURL, videoURL, category]
-      );
+      await sql`
+        INSERT INTO uploads (title, subtitle, description, imgURL, videoURL, categories)
+        VALUES (${title}, ${subtitle}, ${description}, ${imgURL}, ${videoURL}, ${category})
+      `;
     } catch {
       // If that fails, try with lowercase column names
-      await sql(
-        `INSERT INTO uploads (title, subtitle, description, imgurl, videourl, categories) 
-         VALUES ($1, $2, $3, $4, $5, $6)`,
-        [title, subtitle, description, imgURL, videoURL, category]
-      );
+      await sql`
+        INSERT INTO uploads (title, subtitle, description, imgurl, videourl, categories)
+        VALUES (${title}, ${subtitle}, ${description}, ${imgURL}, ${videoURL}, ${category})
+      `;
     }
     
     console.log('Data inserted successfully!');
