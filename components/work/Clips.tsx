@@ -285,15 +285,15 @@ const Clips = ({ uploads, onUpdateClip }: ClipsProps) => {
 
       {isModalOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+          className="fixed inset-0 bg-black/80 bg-blu flex justify-center items-center z-50"
           onClick={closeModal}
         >
           <div
-            className="bg-white  overflow-hidden relative"
+            className="bg-blue-500/50  overflow-hidden relative"
             onClick={(e) => e.stopPropagation()}
           >
             <iframe
-              className="w-screen md:w-[60rem] h-[35rem]"
+              className="w-screen md:w-240 h-140"
               allow="autoplay"
               src={currentClip?.videoURL ?? ""}
               title="Video player"
@@ -309,8 +309,8 @@ const Clips = ({ uploads, onUpdateClip }: ClipsProps) => {
       )}
 
       {isEditModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
-          <div className="bg-white p-8 rounded-lg w-[50rem] text-black ">
+        <div className="fixed inset-0 bg-black/80 flex justify-center items-center z-50">
+          <div className="bg-white p-8 rounded-lg w-200 text-black ">
             <h2 className="text-2xl font-bold mb-4">Edit Clip</h2>
             <form onSubmit={handleEditSubmit}>
               <div className="mb-4">
