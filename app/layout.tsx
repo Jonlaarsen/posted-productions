@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/nav/Header";
 import { OrganizationJsonLd } from "@/components/JsonLd";
 import Script from "next/script";
+import CookieBanner from "@/components/cookie/CookieBanner";
 
 const geistSans = Fira_Sans({
   variable: "--font-geist-sans",
@@ -102,6 +103,7 @@ export default function RootLayout({
         <OrganizationJsonLd />
         <Header />
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

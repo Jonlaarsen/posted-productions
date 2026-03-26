@@ -234,7 +234,7 @@ const Clips = ({ uploads, onUpdateClip }: ClipsProps) => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               key={upload.id}
-              className="cursor-pointer relative overflow-hidden relative group w-screen h-auto md:max-w-100 lg:max-w-108 2xl:max-w-124 md:h-[13.5rem] lg:h-[15rem]  2xl:h-[16.5rem]"
+              className="cursor-pointer relative overflow-hidden relative group w-screen h-auto max-h-60 md:max-w-100 lg:max-w-108 2xl:max-w-124 md:h-[13.5rem] lg:h-[15rem]  2xl:h-[16.5rem]"
               onClick={() => openModal(upload)}
             >
               <img
@@ -242,14 +242,14 @@ const Clips = ({ uploads, onUpdateClip }: ClipsProps) => {
                 alt=""
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:brightness-[.25] group-hover:scale-110"
               />
-              <div className="absolute z-50 bg-black/50 inset-0 flex flex-col justify-center items-center size-full px-5 text-center text-white group-hover:opacity-100 opacity-0 duration-300 ease-in-out transition-opacity">
-                <h1 className="hidden group-hover:block text-3xl mb-2 font-bold">
+              <div className="absolute z-50 bg-black/50 inset-0 flex flex-col justify-center items-center size-full px-5 text-center text-white group-hover:opacity-100 opacity-100 md:opacity-0 duration-300 ease-in-out transition-opacity">
+                <h1 className="block md:hidden group-hover:block text-3xl mb-2 font-bold">
                   {upload.title}
                 </h1>
-                <h3 className="hidden group-hover:block text-2xl mb-2 font-thin w-[24rem]">
+                <h3 className="block md:hidden bg-blue-500/50 group-hover:block text-2xl mb-2 px-4 font-thin w-[24rem]">
                   {upload.subtitle}
                 </h3>
-                <p className="hidden group-hover:block text-blue-500 font-bold">
+                <p className="block md:hidden group-hover:block text-blue-500 font-bold ">
                   {`/ `}
                   {upload.description}
                   {` /`}

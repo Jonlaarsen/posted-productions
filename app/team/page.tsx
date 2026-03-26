@@ -18,14 +18,14 @@ const teamMembers = [
     id: 2,
     url: "/profile-pictures/WooPP.jpeg",
     name: "Wooseok Kim",
-    role: "Better than tommy",
+    role: "Fixer/Production assistant",
     desc: "Wooseok Kim is a versatile fixer, and production assistant with a strong track record in documentary filmmaking. His expertise in facilitating seamless production makes him an invaluable asset to any project. His portfolio working as a fixer and logistics expert has been among big channels such as CNA, Channel Sky, ARD, VICE, VRT, BBC Radio and more.",
   },
   {
     id: 3,
     url: "/profile-pictures/TommyPP.jpeg",
     name: "Tommy Choi",
-    role: "Producer",
+    role: "Cinematographer/Editor/Director",
     desc: "Tommy Choi is a highly experienced cinematographer, editor, and director collaborating with brands such as Gentle Monster, Maison Margiela, AVE, Converse, Vans, Kasina and more. Whilst owning a strong brand marketing portfolio, Tommy is also highly experienced working as cameraman on documentaries such as ‘The Raincoat Killer’ series on Netflix and shooting music videos with the likes of artists like Kali Uchis, Travis Scott, 21 Savage. Woo Wonjae, The Black Skirts and P1Harmony",
   },
 
@@ -33,14 +33,14 @@ const teamMembers = [
     id: 5,
     url: "/profile-pictures/IkkPP.jpeg",
     name: "Ikk Seung",
-    role: "Sound Designer",
+    role: "Production Manager/Editor",
     desc: "Ikk is a skilled production manager and editor with a proven track record, having previously worked on the successful YouTube channel Meta Comedy. With expertise in managing complex projects and a keen eye for detail, Ikk brings a wealth of experience to Posted Productions, ensuring smooth operations and seamless execution across all productions. For post-production, Ikk also works as an editor, turning raw content into a polished final product.",
   },
   {
     id: 6,
     url: "/profile-pictures/IdeunPP.jpeg",
     name: "Ideun Jeong",
-    role: "Creative Director",
+    role: "On-set Professional",
     desc: "Ideun is a skilled on-set professional who focuses mainly on sound, lighting, editing and script writing. With a background in film, Ideun brings a deep understanding of production equipment, and has a sharp ear for high-quality sound design. Her technical expertise spans both the creative and operational aspects, especially for audio production, allowing her to effectively manage soundscapes. She has had previous experience as a field recorder and a mixer on projects for CNA, BBC Radio, Caper Film (Netflix movie Alienoid), and more!",
   },
 ];
@@ -119,7 +119,7 @@ const Page = () => {
               <span className="font-mono font-black text-3xl">
                 {member.name}
               </span>
-              <span className="font-extralight text-2xl text-white/70">
+              <span className="font-thin text-xl text-blue-200">
                 {member.role}
               </span>
             </div>

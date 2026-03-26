@@ -239,6 +239,7 @@ export default function ContactPage() {
             <iframe
               src="https://player.vimeo.com/video/1051779255?h=e8c1e1223f&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              loading="lazy"
               className=" w-screen  h-full object-fill hidden md:flex "
               title="Contact us Video"
             ></iframe>

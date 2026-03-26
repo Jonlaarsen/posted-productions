@@ -30,7 +30,7 @@ const Header = () => {
   }, [menuOpen]);
 
   return (
-    <>
+    <div className="sticky top-0 right-0 left-0 z-100">
       <Link href="/">
         <img
           src="/postedlogo.png"
@@ -85,7 +85,7 @@ const Header = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
